@@ -44,6 +44,13 @@ const GTMInit = (code: string) => {
   if (window?.react_gtm_ts?.init) return;
   window.react_gtm_ts.init = true;
 
+  if (typeof code === 'undefined' || code.length <= 0) {
+    console.error(
+      '🛑 react-gtm-ts - Add ReactTagManager.init passing GTM code in app or _app (nextjs), see more in the documentation https://github.com/jr-duarte/react-gtm-ts',
+    );
+    return;
+  }
+
   const elScript = document.createElement('script');
   const script = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
