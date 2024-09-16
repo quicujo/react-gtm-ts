@@ -67,4 +67,4 @@ export default Home;
 
 # Learn More
 
-To learn more about Google Tag Manager, take a look at the following resource [documentation](https://developers.google.com/tag-manager/devguide?hl=pt-br).
+To learn more about Google Tag Manager, take a look at the following resource [documentation](https://developers.google.com/tag-manager/devguide).

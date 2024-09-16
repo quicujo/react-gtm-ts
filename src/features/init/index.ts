@@ -42,6 +42,12 @@ export const init = ({
 const GTMInit = (code: string) => {
   if (typeof window === 'undefined') return;
   if (window?.react_gtm_ts?.init) return;
+  if (typeof code === 'undefined' || code.length <= 0) {
+    console.error(
+      '🛑 react-gtm-ts - Add ReactTagManager.init passing GTM code in app or _app (nextjs), see more in the documentation https://github.com/jr-duarte/react-gtm-ts',
+    );
+    return;
+  }
   window.react_gtm_ts.init = true;
 
   const elScript = document.createElement('script');
